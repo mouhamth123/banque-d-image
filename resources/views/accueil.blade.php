@@ -1,24 +1,29 @@
 
 
-@extends("layout.app")
+@extends("layouts.app")
 @section("content")
 
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th>identifient</th>
+      <th>nom</th>
+      <th>email</th>
+      <th></th>
+      
     </tr>
   </thead>
   <tbody>
   @foreach($u as $ui)
     <tr>
-      <th scope="row">{{$ui->id}}</th>
+      <th >{{$ui->id}}</th>
       <td>{{$ui->name}}</td>
       <td>{{$ui->email}}</td>
-      <td>{{$ui->password}}</td>>
+      <th>           <form action="user/{id}" method="post">
+               @csrf
+               @method('delete')
+               <input type="submit" class="btn btn-danger" name="delete" value="Supprimer">
+           </form></th>
     </tr>
     @endforeach
    

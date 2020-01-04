@@ -4,26 +4,36 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use Auth;
-Use image;
+
+//Use \App\Image;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Str;
+use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+
+
+
+
+
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Response;
-
-
+use Intervention\Image\ImageManager;
 class UserController extends Controller
 {
     
-    public function profil(){
+    public function profile(){
         $user = Auth::user();
-$image=DB::table('images')
-            ->where('user_id', 1);
-            
-dd($image);
+        Auth::login($user);
+        $image = DB::table('images')->where('user_id',$user->id )->get();
+         //$image->images;   
+      dd($user);
+    
         //$image= Image::create($request->All());
-        return view('profile',compact('user','image'));
+        return view('users.profil',compact('user','image'));
     }
+   
 
     public function update_avatar(Request $request)
     {
@@ -32,10 +42,12 @@ dd($image);
         
         $user=new \App\User();
         if($request->has('avatar')){
-            $image = $request->file('avatar');
-            $filename= time().'.'.$user->getClientOriginalExtension();
-            Image::make($avatar)->resize(300,300)->save(public_path('/uploads/avatars/'.$filename));
-
+            $image = $request->avatar;
+          //  dd($image);
+            $filename= time().'_'.$image;
+           //dd($filename);
+            Image::make($image)->resize(300,300)->save('public/uploads/avatars/'.$filename);
+            
 
             $user= Auth::user();
             $user->avatar=$filename;
@@ -45,6 +57,15 @@ dd($image);
        
     }
 
+
+    public function destroy($id)
+    {
+       $image = \App\User::find($id);
+       dd($image);
+       if($image)
+           $image->delete();
+       return back()->with(['success' => "Image $image->name supprimé"]);
+    }
     
 
 }

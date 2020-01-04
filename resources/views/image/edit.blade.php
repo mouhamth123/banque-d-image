@@ -2,7 +2,7 @@
    @csrf
    @method('patch')
    
-   <div><input type="text" name="nom_image" class="form-control" placeholder="le nom du produit" value="{{$image->nom_image}}"></div>
+   <div ><input type="text" name="nom_image" class="form-control" placeholder="le nom du produit" value="{{$image->nom_image}}"></div>
    <div> <textarea name="description" id="description" cols="30" rows="10" class="form-control" placeholder="La description">{{$image->description}}</textarea> </div>
                      
     <div>

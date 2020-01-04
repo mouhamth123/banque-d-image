@@ -20,7 +20,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        //$this->middleware('auth');
+       // $this->middleware('verified');
     }
 
     /**
@@ -30,8 +30,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $imag=\App\Image::all();
         $image=\App\Image::all();
-        return view('home',compact('image'));
+        return view('home',compact('image','imag'));
     }  
 
  
@@ -88,19 +89,22 @@ class HomeController extends Controller
            if($request->has('images')){
             //On enregistre l'image dans un dossier
             $image = $request->file('images');
+            
+            //Nous enregistrerons nos fichiers dans /uploads/images dans public
+            $folder = '/uploads/images/';
             //Nous allons definir le nom de notre image en combinant le nom du produit et un timestamp
             $image_name = Str::slug($request->input('nom_image')).'_'.time();
-            //Nous enregistrerons nos fichiers dans /uploads/images dans public
-            $folder = '/uploads/images';
             //Nous allons enregistrer le chemin complet de l'image dans la BD
             $imag->images = $folder.$image_name.'.'.$image->getClientOriginalExtension();
+            
             //Maintenant nous pouvons enregistrer l'image dans le dossier en utilisant la methode uploadImage();
             $this->uploadImage($image, $folder, 'public', $image_name);
         }
            $imag->save();
            return redirect(route('Images.index'));
         }
-        
+      
+
         
      
 
@@ -109,6 +113,8 @@ class HomeController extends Controller
 
     
     public function indexe(){
+
+        //$this->authorize('admin');
         //$imag=\App\Image::orderBy('created_at', 'DESC')->get();
        $image = \App\Image::orderBy('created_at', 'DESC')->get();
         //$categories= \App\Category::get();
@@ -190,7 +196,7 @@ return view('image.edit', compact('image','categories'));
    $image = Image::find($id);
    if($image)
        $image->delete();
-   return redirect()->route('Images.index')->with(['success' => "Image $image->nom_image supprimé"]);
+   return back()->with(['success' => "Image $image->nom_image supprimé"]);
 }
 
 public function uploadImage(UploadedFile $uploadedFile, $folder = null, $disk = 'public', $filename = null){
