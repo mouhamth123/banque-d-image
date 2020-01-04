@@ -21,7 +21,6 @@ Route::get('/profile','UserController@profil')->name("profil");
 Route::get('/profile','UserController@update_avatar');
 Route::get('/abonnement/expired', "AbonnementController@expired");
 
-
 Route::patch('image/{id}/update', 'HomeController@update')->name('update_image');
 
 Route::get('image/{id}/download', 'HomeController@show')->name('download_image');
