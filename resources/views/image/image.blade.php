@@ -1,11 +1,11 @@
 @extends("layouts.app")
 @section("content")
-<br><br><br><br><br><br><br><br>
+<br><br>
 @if(session('success'))
    <div class="alert alert-success">{{session('success')}}</div>
 @endif
 
-<div><a href="image/create" class="btn btn-primary">ajouter une image</a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<a href="/home" class="btn btn-primary">Accueil</a></div><br>
+<div><a href="image/create" class="btn btn-primary">ajouter une image</a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<a href="/home" class="btn btn-primary">Accueil</a>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<a href="/users" class="btn btn-primary">les membres</a></div><br>
 <table borderbgcolor="yellow" bordercolor="green" class="table table-striped">
        <tr>
            <th>#</th>        

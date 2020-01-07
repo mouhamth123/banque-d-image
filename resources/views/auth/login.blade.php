@@ -45,16 +45,16 @@
             <a class="nav-link js-scroll-trigger" href="#about">A Propos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#projects">Animaux</a>
+            <a class="nav-link js-scroll-trigger" href="/faune">Animaux</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#signup">Architechture</a>
+            <a class="nav-link js-scroll-trigger" href="/architecture">Architechture</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">Mangas</a>
+            <a class="nav-link js-scroll-trigger" href="/oser">Osers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">Nature</a>
+            <a class="nav-link js-scroll-trigger" href="/nature">Nature</a>
           </li>
         </ul>
       </div>

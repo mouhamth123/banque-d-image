@@ -21,6 +21,11 @@
 </head>
 <body>
     <div id="app">
+
+  
+ 
+    
+  
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/welcome') }}">
@@ -33,7 +38,22 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/faune">Animaux</a>
+          </li>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/architecture">Architechture</a>
+          </li>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/oser">Oser</a>
+          </li>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/nature">Nature</a>
+          </li>
+        </ul>
+      </div>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
