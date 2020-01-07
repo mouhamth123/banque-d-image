@@ -47,3 +47,5 @@ Route::delete('user/{id}', 'UserController@destroy');
 
 Route::get('/nature', 'CategoriesController@nature');
 Route::get('/oser', 'CategoriesController@oser');
+Route::get('/faune', 'CategoriesController@faune');
+Route::get('/architecture', 'CategoriesController@architecture');

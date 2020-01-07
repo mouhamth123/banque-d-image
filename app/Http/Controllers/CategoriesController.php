@@ -42,4 +42,23 @@ class CategoriesController extends Controller
         return view('categories.oser',compact('categories','image'));
     }
 
+    public function faune(){
+        $categories = new \App\Category();
+        $image = DB::table('images')->where('categories_id',3 )->get();
+         //$image->images;   
+      // dd($image);
+    
+        //$image= Image::create($request->All());
+        return view('categories.faune',compact('categories','image'));
+    }
+    public function architecture(){
+        $categories = new \App\Category();
+        $image = DB::table('images')->where('categories_id',4 )->get();
+         //$image->images;   
+      // dd($image);
+    
+        //$image= Image::create($request->All());
+        return view('categories.architecture',compact('categories','image'));
+    }
+
 }

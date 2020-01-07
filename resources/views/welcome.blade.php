@@ -38,10 +38,10 @@
             <a class="nav-link js-scroll-trigger" href="#about">A Propos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#projects">Animaux</a>
+            <a class="nav-link js-scroll-trigger" href="/faune">Animaux</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#signup">Architechture</a>
+            <a class="nav-link js-scroll-trigger" href="/architecture">Architechture</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="/oser">Oser</a>
