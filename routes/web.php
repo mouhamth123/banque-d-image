@@ -18,7 +18,7 @@ Route::post('image/create','HomeController@store')->name("ajouter_image");
 
 Route::get('image/{id}/edit','HomeController@edit')->name("editer_image");
 Route::get('/profil','UserController@profile')->name("profile");
-Route::get('/profile','UserController@update_avatar');
+Route::post('/profile','UserController@update_avatar');
 Route::get('/abonnement/expired', "AbonnementController@expired");
 Route::get('/welcome', 'HomeController@index')->name('welcome');
 

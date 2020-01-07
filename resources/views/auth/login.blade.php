@@ -67,7 +67,7 @@
       <div class="mx-auto text-center">
         <h1 class="mx-auto my-0 text-uppercase">WORLD PICTURES</h1>
 <br><br>
-        <form method="get" action="/profile">
+        <form method="get" action="/profil">
                         @csrf
 
                         <div class="form-group row">

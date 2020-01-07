@@ -1,3 +1,6 @@
+
+@extends("layouts.app")
+@section("content")
 <form action="{{route('update_image',['id'=>$image->id])}}" method="post" enctype="multipart/form-data">
    @csrf
    @method('patch')
@@ -25,3 +28,4 @@
 </div>
    <div> <button class="btn btn-primary">Editer</button> </div>
 </form>
+@endsection

@@ -61,6 +61,7 @@
         <h1 class="mx-auto my-0 text-uppercase">WORLD PICTURES</h1>
         <h2 class="text-white-50 mx-auto mt-2 mb-5">EXPLOREZ LE MONDE DE L'IMAGE.</h2>
         <a href="/login" class="btn btn-primary js-scroll-trigger">Espace membre</a>
+        <a href="/register" class="btn btn-primary js-scroll-trigger">s'inscrire</a>
       </div>
     </div>
   </header>

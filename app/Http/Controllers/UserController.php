@@ -25,10 +25,11 @@ class UserController extends Controller
     
     public function profile(){
         $user = Auth::user();
-        Auth::login($user);
+        //dd($user);
+        
         $image = DB::table('images')->where('user_id',$user->id )->get();
          //$image->images;   
-      dd($user);
+     
     
         //$image= Image::create($request->All());
         return view('users.profil',compact('user','image'));
