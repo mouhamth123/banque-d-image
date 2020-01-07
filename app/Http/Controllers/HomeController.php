@@ -39,9 +39,9 @@ class HomeController extends Controller
     
     public function accueil()
     {
-        $u= \App\User::all();
+        $user= \App\User::all();
         //dd($u);
-        return view('accueil',compact('u'));
+        return view('accueil',compact('user'));
     }
 
 

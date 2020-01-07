@@ -47,9 +47,8 @@ class UserController extends Controller
           //  dd($image);
             $filename= time().'_'.$image;
            //dd($filename);
-            //Image::make($image)->resize(300,300)->save('public/uploads/avatars/'.$filename);
-            Image::make($request->file('photo')->getRealPath('public/uploads/avatars/.$filename'));
-
+            Image::make($image)->resize(300,300)->save('public/uploads/avatars/'.$filename);
+            
 
             $user= Auth::user();
             $user->avatar=$filename;

@@ -19,11 +19,7 @@
       <th >{{$ui->id}}</th>
       <td>{{$ui->name}}</td>
       <td>{{$ui->email}}</td>
-      <th>           <form action="user/{id}" method="post">
-               @csrf
-               @method('delete')
-               <input type="submit" class="btn btn-danger" name="delete" value="Supprimer">
-           </form></th>
+      <th>          
     </tr>
     @endforeach
    
